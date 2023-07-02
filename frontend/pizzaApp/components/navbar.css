@@ -1,0 +1,114 @@
+
+ .top-nav {
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 justify-content: space-between;
+	 background-color: rgba(0, 0, 0);
+	 /* color: #fff; */
+	 font-size:30px;
+	 height: 20px;
+	 padding: 1em;
+}
+ .menu-item {
+	 display: flex;
+	 flex-direction: row;
+	 list-style-type: none;
+	 margin: 0;
+	 padding: 0;
+     font-size: medium;
+}
+ .menu-item > li {
+	 margin: 0 1rem;
+	 overflow: hidden;
+	 font-size: 25px;
+	 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu-item a:hover{
+    color: #fd7302;
+}
+ .menu-item-button-container {
+	 display: none;
+	 height: 100%;
+	 width: 30px;
+	 cursor: pointer;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+}
+ #menu-item-toggle {
+	 display: none;
+}
+ .menu-item-button, .menu-item-button::before, .menu-item-button::after {
+	 display: block;
+	 background-color: #fff;
+	 position: absolute;
+	 height: 4px;
+	 width: 30px;
+	 transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+	 font-size: 40px;
+}
+ .menu-item-button::before {
+	 content: '';
+	 margin-top: -8px;
+}
+ .menu-item-button::after {
+	 content: '';
+	 margin-top: 8px;
+}
+ #menu-item-toggle:checked + .menu-item-button-container .menu-item-button::before {
+	 margin-top: 0px;
+	 transform: rotate(405deg);
+}
+ #menu-item-toggle:checked + .menu-item-button-container .menu-item-button {
+	 background: rgba(255, 255, 255, 0);
+}
+ #menu-item-toggle:checked + .menu-item-button-container .menu-item-button::after {
+	 margin-top: 0px;
+	 transform: rotate(-405deg);
+}
+ @media (max-width: 700px) {
+	 .menu-item-button-container {
+		 display: flex;
+	}
+	 .menu-item {
+		 position: absolute;
+		 top: 0;
+		 margin-top: 50px;
+		 left: 0;
+		 flex-direction: column;
+		 width: 100%;
+		 justify-content: center;
+		 align-items: center;
+	}
+	 #menu-item-toggle ~ .menu-item li {
+		 height: 0;
+		 margin: 0;
+		 padding: 0;
+		 border: 0;
+		 transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	 #menu-item-toggle:checked ~ .menu-item li {
+		 border: 1px solid #333;
+		 height: 2.5em;
+		 padding: 0.5em;
+		 transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	 .menu-item > li {
+		 display: flex;
+		 justify-content: center;
+		 margin: 0;
+		 padding: 0.5em 0;
+		 width: 100%;
+		 color: white;
+		 background-color: #222;
+	}
+	 .menu-item > li:not(:last-child) {
+		 border-bottom: 1px solid #444;
+	}
+}
+.menu-item li a{
+    text-decoration: none;
+    color:#fff;
+}
+ 

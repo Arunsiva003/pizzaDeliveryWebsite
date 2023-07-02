@@ -1,0 +1,113 @@
+.detail_card{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #292929; */
+    background-image: url(./../../assets/images/entry2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* object-fit: cover; */
+    
+}
+.detail_card_container{
+    width: 450px;
+    height: 700px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.card_img{
+    position: relative;
+    /* width: 100%; */
+    height: 280px;
+    box-shadow: 0 0 120px 0 rgba(0,0,0,0.4);
+}
+/* .card_img h2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(to bottom ,rgba(0,0,0,0.25),transparent);
+
+} */
+.card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.card_content{
+    flex: 1;
+    padding: 10px 30px;
+    
+}
+.card_pizza_name{
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #d8d8d8;
+}
+.card_pizza_name h3{
+    font-weight: 600;
+}
+.card_details{
+    margin: 10px 0 30px 0;
+    font-size: 1rem;
+    line-height: 1.4em;
+}
+.detail_footer{
+    margin: 0 50px;
+}
+.detail_footer button{
+    display: inline-block;
+    gap: 1.3rem;
+    /* background: #7f88d7; */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s ease;
+    margin-right: 55px;
+
+}
+.edit-btn{
+    background: blue;
+}
+.del-btn{
+    background: red;
+}
+.detail_footer button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px 0 rgba(0,0,0,0.3);
+}
+/* .detail_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    font-size: 1.6em;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s ease;
+} */
+
+

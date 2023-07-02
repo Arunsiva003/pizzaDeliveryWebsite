@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#bac{
+    width: 100vw;
+    height: 100vh;
+}
+.userprofile{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+.profilecard{
+    background-color:aquamarine;
+    position: absolute;
+    width: 40%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.4);
+box-shadow: 0 8px 32px 0 rgba(34, 43, 159, 0.37);
+backdrop-filter: blur( 3.5px );
+-webkit-backdrop-filter: blur( 3.5px );
+border-radius: 10px;
+}
+
+.div-image{
+    width: 50%;
+    align-self: center;
+    height: 40%;
+    /* background-color:red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.user-image{
+    width: 50%;
+    height: 80%;
+}
+.div-details{
+    /* background-color:blue; */
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.infou{
+    /* background-color:rebeccapurple; */
+    width: 60%;
+    height: max-content;
+}
+.infou>h1{
+    margin:20px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-transform:uppercase;
+}
+
+.user-but{
+align-self: center;
+padding: 30px;
+}
+.user-but>button,.edit{ 
+    display: inline-block;
+   padding: 10px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(113, 111, 111, 0.1);
+    border: 1px solid rgba(255, 172, 172, 0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-inline:20px;
+ 
+}
+.user-but>button:hover{
+       background-color: rgba(255,255,255,0.2);
+}
+.edit:hover{
+    background-color: rgba(255,255,255,0.2);
+
+}

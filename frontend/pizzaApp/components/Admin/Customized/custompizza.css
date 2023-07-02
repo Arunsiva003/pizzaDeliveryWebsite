@@ -1,0 +1,7 @@
+.additon{
+    overflow: hidden;
+}
+.additon >h2{
+    font-size: 20px;
+    color: rgb(245, 88, 88);
+}
