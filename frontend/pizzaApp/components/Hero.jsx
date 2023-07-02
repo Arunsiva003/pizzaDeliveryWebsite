@@ -24,13 +24,13 @@ function Hero() {
 
       <Carousel autoPlay infiniteLoop interval={3000} showThumbs={false} className='home_carousel'>
       <div className='carousel_container'>
-        <img className="carousel_img" src={IMG1} alt="Image 1" />
+        <img className="carousel_img" src="../assets/images/bannerimg10.jpg" alt="Image 1" />
       </div>
       <div className='carousel_container'>
-        <img className="carousel_img" src="../assets/images/bannerimg7.jpg" alt="Image 2" />
+        <img className="carousel_img" src="../assets/images/bannerimg8.jpg" alt="Image 2" />
       </div>
       <div className='carousel_container'>
-        <img className="carousel_img" src="../assets/images/bannerimg6.jpg" alt="Image 3" />
+        <img className="carousel_img" src="../assets/images/bannerimg9.jpg" alt="Image 3" />
         <button onClick={handleOrderClick} className='carousel-button1'>Order Now</button>
       </div>
     </Carousel>

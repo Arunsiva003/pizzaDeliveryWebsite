@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../components/UserContext';
+import { FaEnvelope, FaLock,FaEye } from 'react-icons/fa';
+import loginBackground from '../../assets/images/login3.jpg';
 
 
 const LoginPage = () => {
@@ -48,166 +50,126 @@ const LoginPage = () => {
 
   const containerStyle = {
     height: '100vh',
-    width: '206vh',
-  };
-
-  const bodyStyle = {
-    height: '100vh',
-    width: '100vw',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '0',
-    background: 'url(./../../assets/images/entry2.jpg)',
+    backgroundImage: `url(${loginBackground})`,
     backgroundSize: 'cover',
-    overflowX: 'hidden',
+  };
+  
+
+  const cardStyle = {
+    width: '400px',
+    padding: '40px',
+    borderRadius: '10px',
+    height:'60%',
+    background: 'rgba(0,0,0,0.4)',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
   };
 
-  const loginContainerStyle = {
-    display: 'flex',
+  const titleStyle = {
+    margin: '30px',
+    padding:'10px',
+    fontSize: '34px',
+    fontWeight: 'bold',
+    color: 'white',
+    textAlign: 'center',
   };
 
-  const loginStyle = {
+  const inputContainerStyle = {
     display: 'flex',
-    flexDirection: 'column',
     alignItems: 'center',
-    fontFamily: 'Arial, sans-serif',
+    marginBottom: '40px',
+    padding: '10px',
+    background: '#f1f1f1',
+    borderRadius: '5px',
   };
 
-  const labelStyle = {
-    marginBottom: '5px',
-    marginLeft: '20px',
-    display: 'flex',
+  const inputIconStyle = {
+    marginRight: '10px',
+    color: '#888',
   };
 
   const inputStyle = {
-    width: '300px',
+    flex: '1',
     padding: '10px',
-    marginLeft: '20px',
-    marginBottom: '15px',
+    border: 'none',
+    background: 'transparent',
+    outline: 'none',
+    color: '#333',
     fontSize: '16px',
-    border: '1px solid #ccc',
-    borderRadius: '4px',
   };
 
-  const passwordFieldStyle = {
-    position: 'relative',
-  };
-
-  const passwordInputStyle = {
-    fontSize: '16px',
-    marginRight: '10px',
-  };
-
-  const togglePasswordStyle = {
-    position: 'absolute',
-    top: '50%',
-    right: '10px',
-    transform: 'translateY(-50%)',
+  const passwordToggleStyle = {
     cursor: 'pointer',
     color: '#888',
   };
 
-  const passwordFieldShowStyle = {
-    color: '#333',
-  };
-
   const buttonStyle = {
     padding: '10px 20px',
-    backgroundColor: '#4caf50',
+    backgroundColor: '#ff9800',
     color: '#fff',
-    margin: '20px',
-    marginLeft: '120px',
     border: 'none',
-    borderRadius: '4px',
+    borderRadius: '5px',
     fontSize: '16px',
+    fontWeight: 'bold',
     cursor: 'pointer',
+    width: '30%',
+    marginTop: '20px',
+    marginLeft: '30%',
+    marginRight: 'auto',
   };
+  
 
   const registerButtonStyle = {
     backgroundColor: 'transparent',
     border: 'none',
-    color: '#ff0000',
+    color: 'blue',
+    fontWeight:"bold",
     fontSize: '14px',
     cursor: 'pointer',
     textDecoration: 'underline',
-  };
-
-  const glassCardStyle = {
-    display: 'flex',
-    flex: '1',
-    position: 'relative',
-    height: '400px',
-    width: '400px',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: '20px',
-    background: 'rgba(255, 255, 255, 0.3)',
-    backdropFilter: 'blur(7.5px)',
-    WebkitBackdropFilter: 'blur(7.5px)',
-    boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.18)',
-    borderRadius: '30px',
-    border: '1px solid rgba(255, 255, 255, 0.18)',
-    zIndex: '4',
+    textAlign: 'center',
+    marginLeft: '15%',
+    marginTop: '10px',
   };
 
   return (
     <div style={containerStyle}>
-      <div style={bodyStyle}>
-        <div style={loginContainerStyle}>
-          <div style={glassCardStyle}>
-            <div style={loginStyle}>
-              <form onSubmit={handleSubmit}>
-                <label htmlFor="email" style={labelStyle}>
-                  Email
-                </label>
-                <input
-                  style={inputStyle}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="email"
-                  placeholder="Your email"
-                />
-                <label htmlFor="password" style={labelStyle}>
-                  Password
-                </label>
-                <div
-                  className={`password-field ${showPassword ? 'show-password' : ''}`}
-                  style={passwordFieldStyle}
-                >
-                  <input
-                    style={Object.assign({}, inputStyle, passwordInputStyle)}
-                    type={showPassword ? 'text' : 'password'}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Your password"
-                  />
-                  <span
-                    className="toggle-password"
-                    data-showpassword=""
-                    onClick={togglePasswordVisibility}
-                    style={Object.assign(
-                      {},
-                      togglePasswordStyle,
-                      showPassword ? passwordFieldShowStyle : null
-                    )}
-                  >
-                    {showPassword ? 'Hide' : 'Show'}
-                  </span>
-                </div>
-                <button type="submit" style={buttonStyle}>
-                  Log In
-                </button>
-              </form>
-              <button
-                style={registerButtonStyle}
-                onClick={handleRegisterClick}
-              >
-                Don't have an account? Register Here
-              </button>
-            </div>
+      <div style={cardStyle}>
+        <h2 style={titleStyle}>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div style={inputContainerStyle}>
+            <FaEnvelope style={inputIconStyle} />
+            <input
+              style={inputStyle}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              placeholder="Email..."
+            />
           </div>
-        </div>
+          <div style={inputContainerStyle}>
+            <FaLock style={inputIconStyle} />
+            <input
+              style={inputStyle}
+              type={showPassword ? 'text' : 'password'}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+            />
+            <FaEye
+              style={passwordToggleStyle}
+              onClick={() => setShowPassword(!showPassword)}
+            />
+          </div>
+          <button type="submit" style={buttonStyle}>
+            Log In
+          </button>
+        </form>
+        <button style={registerButtonStyle} onClick={handleRegisterClick}>
+          Don't have an account? Register Here
+        </button>
       </div>
     </div>
   );

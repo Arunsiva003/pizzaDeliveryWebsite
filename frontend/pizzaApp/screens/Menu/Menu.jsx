@@ -4,10 +4,10 @@ import Navbar from '../../components/Navbar';
 
 const Menu = () => {
   return (
-    <>
+    <div >
       <Navbar />      
-      <FoodList />
-    </>
+      <FoodList/>
+    </div>
   );
 };
 

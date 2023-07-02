@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from '../../components/Navbar';
+import { FiCheckCircle } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 
 const CustomPizzaPage = () => {
@@ -9,6 +11,7 @@ const CustomPizzaPage = () => {
   const [selectedCheese, setSelectedCheese] = useState('');
   const [selectedVeggies, setSelectedVeggies] = useState([]);
   const [message,setmessage]=useState("")
+  const navigate  =useNavigate()
 
   const User = JSON.parse(localStorage.getItem('user'));
   // const User = user._id;
@@ -77,7 +80,7 @@ const CustomPizzaPage = () => {
         setTimeout(() => {
           setmessage("");
           navigate("/menu");
-        }, 3000); 
+        }, 1000); 
         // Reset the form or show a success message
       })
       .catch((error) => {
@@ -114,7 +117,26 @@ const CustomPizzaPage = () => {
       <Navbar/>
     <div style={styles.topcontainer}>
      <h2 style={styles.heading}>Customize Your Pizza</h2>
-      {message && <h1 style={styles.mess}>{message}</h1>}
+     {message && (
+  <div
+    style={{
+      position: 'fixed',
+      top: '10px',
+      right: '10px',
+      backgroundColor: 'green',
+      color: 'white',
+      padding: '10px',
+      borderRadius: '5px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex:'10',
+    }}
+  >
+    <FiCheckCircle style={{ marginRight: '5px' }} />
+    {message}
+  </div>
+)}
     <div style={styles.container}>
       <div style={styles.choicesContainer}>
         <div style={styles.choiceContainer}>
@@ -213,7 +235,7 @@ const styles = {
     fontSize:'60px'
   },
   container: {
-    maxWidth: '850px',
+    maxWidth: '950px',
     margin: '0 auto',
     padding: '20px',
     fontFamily: 'Arial, sans-serif',
@@ -226,7 +248,7 @@ const styles = {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    width: '70%',
+    width: '90%',
     color:'white'
   },
   mess:{
@@ -242,9 +264,9 @@ const styles = {
     backgroundColor: 'rgba(0,0,0,0.8)',
     borderRadius: '8px',
     padding: '20px',
-    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 2px 4px rgba(270, 270, 270, 0.9)',
     marginBottom: '20px',
-    width: '48%',
+    width: '42%',
     minHeight:'100px'
   },
   choiceHeading: {

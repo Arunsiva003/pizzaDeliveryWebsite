@@ -238,12 +238,13 @@
 
 .carousel-button1{
   position: absolute!important ;
-    bottom:110px!important;
-    background-color: white;
+    bottom:140px!important;
+    background-color:orange;
+    color:white;
     z-index: 10;
-    width:8rem;
+    width:8.8rem;
     font-size: large;
-    margin-left:20%;
+    margin-left:70.3%;
     border: none;
     border-radius: 20px;
     height:2.5rem;

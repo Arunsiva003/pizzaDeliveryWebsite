@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar';
+import { FiCheckCircle } from 'react-icons/fi';
 
 function Cartuser() {
   const history = useNavigate();
@@ -9,7 +10,6 @@ function Cartuser() {
   const [myorders, setMyOrders] = useState([]);
   const [message, setmessage] = useState("");
   const [totalAmount, setTotalAmount] = useState(0);
-  console.log(myorders)
   useEffect(() => {
     axios
       .get(`http://localhost:3001/orders/userorders/${user.name}`)
@@ -22,6 +22,7 @@ function Cartuser() {
       });
   }, []);
 
+  
   const calculateTotalAmount = (orders) => {
     const amount = orders.reduce((total, ord) => total + ord.price*ord.quantity, 0);
     console.log(amount)
@@ -73,10 +74,29 @@ function Cartuser() {
   return (
     <>
       <Navbar/>
-   
+    <div style={{  background:`url("../../assets/images/entry2.jpg")`,
+  backgroundSize:'cover',height:"fit-content"}}>
     <div style={cartContainerStyle}>
-      {message && <h1 >{message}</h1>}
-      <h1 style={pageTitleStyle}>Your Cart</h1>
+    {message && (
+  <div
+    style={{
+      position: 'fixed',
+      top: '10px',
+      right: '10px',
+      backgroundColor: 'green',
+      color: 'white',
+      padding: '10px',
+      borderRadius: '5px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex:'10',
+    }}
+  >
+    <FiCheckCircle style={{ marginRight: '5px' }} />
+    {message}
+  </div>
+)}      <h1 style={pageTitleStyle}>Your Cart</h1>
 
       {myorders.length !== 0 ? (
         myorders.map((ord) => (
@@ -143,6 +163,7 @@ function Cartuser() {
         </div>
       )}
     </div>
+    </div>
     </>
   );
 }
@@ -188,21 +209,29 @@ const cartContainerStyle = {
   maxWidth: '900px',
   margin: '0 auto',
   padding: '20px',
+
 };
 
 const pageTitleStyle = {
   fontSize: '24px',
   marginBottom: '20px',
   display:'flex',
-  justifyContent:'center'
+  justifyContent:'center',
+  color:'white'
 };
 
 const cartItemStyle = {
   display: 'flex',
+  justifyContent: 'space-between',
   marginBottom: '20px',
   border: '1px solid #ddd',
   padding: '10px',
+  boxShadow: '0px 2px 4px rgba(270, 270, 270, 1)',
+  borderRadius: '10px',
+  backgroundColor:'rgba(0,0,0,0.8)'
+
 };
+
 
 const cartItemImageStyle = {
   width: '200px',
@@ -215,20 +244,20 @@ const cartItemDetailsStyle = {
 };
 
 const cartItemNameStyle = {
-  color: '#333',
+  color: 'white',
   fontSize: '20px',
   marginBottom: '10px',
 };
 
 const cartItemPriceStyle = {
   fontSize: '16px',
-  color: '#777',
+  color: 'white',
 };
 
 const quantityButtonContainerStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  marginBottom: '10px',
+  // display: 'flex',
+  // alignItems: 'center',
+   margin: '10px',
 };
 
 const quantityButtonStyle = {
@@ -245,6 +274,7 @@ const quantityTextStyle = {
   fontSize: '16px',
   fontWeight: 'bold',
   margin: '0 10px',
+  color:'white'
 };
 
 const removeButtonStyle = {
@@ -271,15 +301,22 @@ const proceedToPayContainerStyle = {
 const totalAmountText = {
   fontSize: '24px',
   fontWeight: 'bold',
+  color:'white',
+  backgroundColor:'black',
+  padding:'10px',
+  boxShadow: '0px 1px 2px rgba(270, 270, 270, 1)',
+  borderRadius: '10px',
+  backgroundColor:'rgba(0,0,0,0.8)'
 };
 
 const proceedToPayButtonStyle = {
   backgroundColor: '#ff9900',
   color: '#fff',
-  padding: '10px 20px',
+  padding: '15px 15px',
   border: 'none',
   borderRadius: '4px',
   cursor: 'pointer',
+  fontSize:'20px'
 };
 
 export default Cartuser;
