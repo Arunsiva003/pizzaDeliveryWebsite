@@ -41,6 +41,7 @@ border-radius: 10px;
 .user-image{
     width: 50%;
     height: 80%;
+    background-blend-mode:color;
 }
 .div-details{
     /* background-color:blue; */

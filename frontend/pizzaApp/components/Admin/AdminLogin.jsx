@@ -70,7 +70,7 @@ const AdminLogin = () => {
         
         <h2 className='admin-text'>Admin Login</h2>
         <div className="input-wrapper">
-          <label>Email:</label>
+          <label style={{color:"white"}}>Email:</label>
           <div className="input-group">
               <img className="icon-admin" src='./../icons/email.png'/>
             <input className='input-admin'
@@ -82,7 +82,7 @@ const AdminLogin = () => {
           </div>
         </div>
         <div className="input-wrapper">
-          <label>Password:</label>
+          <label style={{color:"white"}}>Password:</label>
           <div className="input-group">
             <img className="icon-admin" src='./../icons/password.png'/>
             <input

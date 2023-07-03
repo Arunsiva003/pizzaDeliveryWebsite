@@ -32,14 +32,16 @@ console.log(isadminauth)
              <div key={pizza._id} className='pizza-block'>
             <img className='img-tag' width="100px" height="200px" src={`http://localhost:3001/images/` + pizza.image} alt='images' />
             <h1 className='name-pizza'  style={{color:"red"}}>{pizza.name}</h1>
-            <h5 style={{ marginRight: 'auto', paddingLeft: '20px', fontSize: '20px' }}>
+            <div className="firstflex">
+            <h5 style={{  fontSize: '20px',color:"white" }}>
               Status: {pizza.status}
             </h5>
-            <h5 style={{marginLeft:"auto",paddingRight:"20px",fontSize:"20px"}}>Type:{pizza.typeofpizza}</h5>
+            <h5 style={{fontSize:"20px",color:"white"}}>Type: {pizza.typeofpizza}</h5>
+            </div>
             <hr className='hrtag' />
             <div className='pqtype'>
-            <h3 className='pqh3'><img width={"40px"} style={{position:"relative",left:"15%"}}  src={price}/> <br/>price: <span style={{color:"red",fontSize:"20px"}}>${pizza.price}</span></h3>
-            <h3 className='pqh3'><img width={"40px"} style={{position:"relative",left:"15%"}} src={pizzaig}/> <br/>quantity:<span style={{color:"red",fontSize:"25px"}}>{pizza.quantity}</span></h3>
+            <h3 className='pqh3'><div className="inner-wrap"><img width={"20px"} src={price}/>  <span style={{color:"red",fontSize:"15px"}}> price: ${pizza.price}</span></div></h3>
+            <h3 className='pqh3'><div className="inner-wrap"><img width={"20px"} src={pizzaig}/><span style={{color:"red",fontSize:"15px"}}>Quantity:{pizza.quantity}</span></div></h3>
             <h3 className='pqh3'>tags: #{pizza.tags}</h3>
             </div>
             <h3 className='des'>{pizza.description}</h3>
