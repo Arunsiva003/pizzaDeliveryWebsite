@@ -43,9 +43,9 @@ console.log(isadminauth)
             <h3 className='pqh3'><div className="inner-wrap"><img width={"20px"} src={price}/>  <span style={{color:"red",fontSize:"15px"}}> price: ${pizza.price}</span></div></h3>
             <h3 className='pqh3'><div className="inner-wrap"><img width={"20px"} src={pizzaig}/><span style={{color:"red",fontSize:"15px"}}>Quantity:{pizza.quantity}</span></div></h3>
             <h3 className='pqh3'>tags: #{pizza.tags}</h3>
-            </div>
             <h3 className='des'>{pizza.description}</h3>
             <Link key={pizza._id} to={`/detailpizza/${pizza._id}`} className='view-details'><h2>veiw details</h2></Link>            
+            </div>
           </div>
       ))}</div>
         </div>

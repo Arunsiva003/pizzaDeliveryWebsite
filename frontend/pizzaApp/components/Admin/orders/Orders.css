@@ -1,0 +1,146 @@
+.body-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .nav-admin {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .spl {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+  }
+  
+  .nav-t {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+  }
+  
+  .admin-contianer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin: 20px;
+  }
+  
+  .pizza-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 20px; */
+    /* padding: 20px; */
+    background-color: #f9f9f9;
+    width:80%;
+    height:fit-content;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  
+  .name-pizza {
+    font-size: 24px;
+    /* margin-bottom: 10px; */
+  }
+  
+  .hrtag {
+    width: 80%;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+  }
+  
+  .pqtype {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 20px; */
+  }
+  
+  .pqh3 {
+    display: flex;
+    justify-content: center;
+    margin:0;
+    align-items: center;
+    background-color: #f9f9f9;
+    /* padding: 10px; */
+    border-radius: 50%;
+  }
+  
+#status{
+    /* margin-top: 10px; */
+    padding: 10px 20px;
+    /* height:10px; */
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    background-color: orangered;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .inner-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-order {
+    /* margin-top: 10px; */
+    padding: 10px 20px;
+    /* height:10px; */
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    background-color: orangered;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .firstflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .des {
+    /* width: 60%; */
+    color:black;
+    margin:0
+  }
+  
+  .no-orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .no-orders h3 {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .no-orders img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .order-button-contain{
+    width:80%;
+    display:flex;
+    margin:10px;
+    justify-content: space-between;
+    /* flex-direction: column; */
+  }

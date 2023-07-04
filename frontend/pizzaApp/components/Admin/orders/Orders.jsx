@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import price from './../../../assets/images/icons8-price-50.png';
 import pizza from './../../../assets/images/icons8-pizza-50.png';
-
+import './Orders.css'
 function Orders() {
   const [orders, setOrders] = useState([]);
   const user = JSON.parse(localStorage.getItem('user'));
@@ -88,19 +88,19 @@ function Orders() {
             <hr className="hrtag" />
             <div className="pqtype">
               <h3 className="pqh3">
-                <img width="40px" style={{ position: 'relative', left: '15%' }} src={price} />
-                <br />
+                <img width="20px" style={{ margin:"2px" }} src={price} />
+                {/* <br /> */}
                 Price: <span style={{ color: 'red', fontSize: '20px' }}>${ord.price}</span>
               </h3>
               <h3 className="pqh3">
-                <img width="40px" style={{ position: 'relative', left: '15%' }} src={pizza} />
-                <br />
+                <img width="20px" style={{margin:"1px" }} src={pizza} />
+                {/* <br /> */}
                 Quantity: <span style={{ color: 'red', fontSize: '25px' }}>{ord.quantity}</span>
               </h3>
               <h3 className="pqh3">Tags: #{ord.tags}</h3>
             </div>
             <h3 className="des">{ord.description}</h3>
-            <div>
+            <div className='order-button-contain'>
               <select
                 id="status"
                 value={ord.status}
@@ -111,10 +111,10 @@ function Orders() {
                 <option value="delivered">Delivered</option>
                 <option value="cancelled">Cancelled</option>
               </select>
-            </div>
               <button onClick={() => handleRemove(ord)} className='btn-order' >
                 Remove
               </button>
+            </div>
           </div>
         )) :<h1 style={{display:"flex",justifyContent:"center",alignItems:"center",width:"100vw",height:"90vh",color:"red",fontSize:"60px"}}>You have recieved no orders yet :(</h1>}
       </div>

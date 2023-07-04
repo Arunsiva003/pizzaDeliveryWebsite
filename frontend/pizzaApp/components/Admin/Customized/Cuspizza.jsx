@@ -3,6 +3,7 @@ import './custompizza.css';
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import img from '../../../assets/images/bannerimg4.jpg'
 import { FiArrowRight, FiShoppingCart } from 'react-icons/fi';
 
 function Cuspizza() {
@@ -127,9 +128,9 @@ function Cuspizza() {
   };
 
   return (
-    <div>
+    <div style={{backgroundImage:`url(${img})`,height:"100vh",backgroundSize:"cover"}}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',fontSize:"30px" }}>
-        <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',borderBottom:"2px dotted red" }}>Customized Pizza</h2>
+        <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',borderBottom:"2px dotted red",color:"white"}}>Customized Pizza</h2>
         <Link to="/usercart" style={{ textDecoration: 'none', color: '#000' }}>
           
         </Link>
