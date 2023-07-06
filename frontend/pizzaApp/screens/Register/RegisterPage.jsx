@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEnvelope, FaLock, FaEye } from 'react-icons/fa';
 import loginBackground from '../../assets/images/login3.jpg';
+import axios from 'axios';
 
 const RegisterPage = () => {
   const [name, setName] = useState('');
@@ -13,8 +14,20 @@ const RegisterPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Handle form submission logic
+    e.preventDefault()
+    console.log("hello")
+    try {
+      const res = await axios.post("http://localhost:3001/auth/register", {
+        name,
+        email,
+        password,
+        phoneNumber,address,
+      })
+      
+      res.data && window.location.replace("/")
+    } catch (error) {
+      console.log({error})
+  };
   };
 
   const handleLoginClick = () => {

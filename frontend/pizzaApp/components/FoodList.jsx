@@ -327,13 +327,14 @@ function FoodList() {
 const styles = {
   container: {
     display: 'flex',
-    background:`url("../../assets/images/menubg.jpg")`
+    background:`url("../../assets/images/menubg.jpg")`,
+    // height:'1000vh'
   },
 
   leftSidebar: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent:"center",
+    marginTop:"200px",
     alignItems: 'center',
     marginBottom: '20px',
   },
