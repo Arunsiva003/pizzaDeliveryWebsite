@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FoodList from '../../components/FoodList';
+import FoodList from '../Menu/FoodList';
 import Navbar from '../../components/Navbar';
 
 const Menu = () => {

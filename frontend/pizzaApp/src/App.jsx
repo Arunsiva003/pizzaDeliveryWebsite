@@ -15,7 +15,7 @@ import { AdminAuthProvider } from './../components/Admin/AdminAuthContext';
 import PrivateRoutes from './PrivateRoute';
 import Orders from '../components/Admin/orders/Orders';
 import { UserProvider } from '../components/UserContext';
-import Cartuser from "../components/CartUser/Cart"
+import Cartuser from '../screens/CartUser/Cart';
 import Cuspizza from '../components/Admin/Customized/Cuspizza';
 import PaymentGateway from '../components/Razor/Razor';
 import Profile from '../components/UserProfile/Profile';
